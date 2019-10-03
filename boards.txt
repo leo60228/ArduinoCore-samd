@@ -271,6 +271,43 @@ adafruit_trinket_m0.menu.debug.on=On
 adafruit_trinket_m0.menu.debug.on.build.flags.debug=-g
 
 
+# Adafruit PyRuler (SAMD21)
+# ------------------------------
+adafruit_pyruler.name=Adafruit PyRuler
+adafruit_pyruler.vid.0=0x239A
+adafruit_pyruler.pid.0=0x801E
+adafruit_pyruler.vid.1=0x239A
+adafruit_pyruler.pid.1=0x001E
+adafruit_pyruler.upload.tool=bossac
+adafruit_pyruler.upload.protocol=sam-ba
+adafruit_pyruler.upload.maximum_size=262144
+adafruit_pyruler.upload.offset=0x2000
+adafruit_pyruler.upload.use_1200bps_touch=true
+adafruit_pyruler.upload.wait_for_upload_port=true
+adafruit_pyruler.upload.native_usb=true
+adafruit_pyruler.build.mcu=cortex-m0plus
+adafruit_pyruler.build.f_cpu=48000000L
+adafruit_pyruler.build.usb_product="PyRuler"
+adafruit_pyruler.build.usb_manufacturer="Adafruit"
+adafruit_pyruler.build.board=PyRuler
+adafruit_pyruler.build.core=arduino
+adafruit_pyruler.build.extra_flags=-DCRYSTALLESS -DADAFRUIT_PYRULER -D__SAMD21E18A__ -DARM_MATH_CM0PLUS {build.usb_flags}
+adafruit_pyruler.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+adafruit_pyruler.build.openocdscript=openocd_scripts/trinket_m0.cfg
+adafruit_pyruler.build.variant=pyruler
+adafruit_pyruler.build.variant_system_lib=
+adafruit_pyruler.build.vid=0x239A
+adafruit_pyruler.build.pid=0x801E
+adafruit_pyruler.bootloader.tool=openocd
+adafruit_pyruler.bootloader.file=trinketM0/bootloader-trinket_m0-v2.0.0-adafruit.5.bin
+adafruit_pyruler.menu.usbstack.arduino=Arduino
+adafruit_pyruler.menu.usbstack.tinyusb=TinyUSB
+adafruit_pyruler.menu.usbstack.tinyusb.build.flags.usbstack=-DUSE_TINYUSB
+adafruit_pyruler.menu.debug.off=Off
+adafruit_pyruler.menu.debug.on=On
+adafruit_pyruler.menu.debug.on.build.flags.debug=-g
+
+
 # Adafruit ItsyBitsy M0 (SAMD21)
 # ------------------------------
 adafruit_itsybitsy_m0.name=Adafruit ItsyBitsy M0
